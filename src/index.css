@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme inline {
+    --color-grunraum-primary: var(--color-green-700);
+    --color-grunraum-secondary: var(--color-emerald-600);
+}
