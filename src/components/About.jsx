@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Leaf, Phone, CheckCircle } from "lucide-react";
+import { SectionContainer } from "./SectionContainer";
 
 export default function About() {
   const services = [
@@ -15,9 +16,10 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16 px-4 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-5 items-center">
+    <div className="min-h-screen bg-gray-50 py-16  overflow-hidden">
+      <SectionContainer>
+       
+        <div className="grid lg:grid-cols-2 gap-5 lg:gap-10 items-center">
           {/* Left Images Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -176,7 +178,8 @@ export default function About() {
             </motion.div>
           </motion.div>
         </div>
-      </div>
+      
+      </SectionContainer>
     </div>
   );
 }

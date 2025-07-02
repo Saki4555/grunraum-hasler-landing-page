@@ -1,62 +1,32 @@
-
-
-// ! v 1
-
-import { motion } from "motion/react";
+import React from "react";
+import { Mouse } from "lucide-react"; // Choose a modern icon
 
 export default function Hero() {
   return (
-    <section
-      className="relative min-h-screen flex items-center justify-center bg-center bg-cover"
-      style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1503785640985-f62e3aeee448?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJlZXN8ZW58MHx8MHx8fDA%3D')`,
-      }}
-    >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-0" />
+    <section className="relative w-full h-screen overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1689728222087-6984f72460c4?w=1600&auto=format&fit=crop&q=80"
+          alt="Garden Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30" />
+      </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-10 py-20">
+      {/* Centered Content */}
+      <div className="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-4">
+        <h1 className="text-3xl md:text-5xl font-semibold tracking-widest mb-6">
+         Gardens That Feel Like Home
+        </h1>
+        <button className="border cursor-pointer hover:scale-105 transition-all duration-500 border-white px-6 py-3 uppercase text-sm font-semibold tracking-wide hover:bg-grunraum-primary hover:border-grunraum-primary rounded-3xl shadow-lg">
+          Book a Personal Consultation
+        </button>
+      </div>
 
-        {/* Text Block */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-white max-w-xl"
-        >
-          <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
-            With Heart and Hand for Your Greenery
-          </h1>
-          <p className="text-lg mb-8">
-            We create and care for gardens where you truly feel at home. Trust in experience, commitment, and honest work.
-          </p>
-          <div className="flex gap-4">
-            <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition">
-              Get 10% Discount
-            </button>
-            <button className="bg-white hover:bg-gray-200 text-green-800 font-semibold py-3 px-6 rounded-xl transition">
-              Our Services
-            </button>
-          </div>
-        </motion.div>
-
-        {/* Floating Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative"
-        >
-          <motion.img
-            src="https://images.unsplash.com/photo-1503785640985-f62e3aeee448?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJlZXN8ZW58MHx8MHx8fDA%3D"
-            alt="Garden example"
-            whileHover={{ scale: 1.05, rotate: 1 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="w-72 h-48 object-cover rounded-3xl shadow-2xl"
-          />
-        </motion.div>
-
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2  rounded-full">
+        <Mouse className="w-9 h-9 text-white animate-pulse" />
       </div>
     </section>
   );
