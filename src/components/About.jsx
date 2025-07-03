@@ -16,7 +16,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16  overflow-hidden">
+    <div id="about" className="min-h-screen bg-gray-50 py-20 overflow-hidden">
       <SectionContainer>
        
         <div className="grid lg:grid-cols-2 gap-5 lg:gap-10 items-center">

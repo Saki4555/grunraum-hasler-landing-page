@@ -1,6 +1,43 @@
 @import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
 
 @theme inline {
     --color-grunraum-primary: var(--color-green-700);
     --color-grunraum-secondary: var(--color-emerald-600);
+    --animate-fade-in: fade-in 0.5s ease-out 1;
+  --animate-blink: blink 0.8s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.3s ease-out 1;
 }
+
+
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fade-up {
+    0% {
+      top: 5px;
+    }
+    100% {
+      top: 0px;
+    }
+  }

@@ -125,7 +125,7 @@ export default function ServicesSection() {
     : services.slice(0, Math.ceil(services.length / 2));
 
   return (
-    <section className="bg-gray-50 py-16 ">
+    <section className="bg-gray-50 py-16 " id="services">
         <SectionContainer>
 
         {/* Badge */}
