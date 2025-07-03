@@ -12,7 +12,7 @@ html {
   --animate-fade-up: fade-up 0.3s ease-out 1;
 }
 
-
+@custom-variant hover (&:hover);
 
 @keyframes fade-in {
     0% {

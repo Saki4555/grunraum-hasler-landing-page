@@ -19,9 +19,9 @@ export default function Hero() {
         <h1 className="text-3xl md:text-5xl font-semibold tracking-widest mb-6">
          Gardens That Feel Like Home
         </h1>
-        <button className="border cursor-pointer hover:scale-105 transition-all duration-500 border-white px-6 py-3 uppercase text-sm font-semibold tracking-wide hover:bg-grunraum-primary hover:border-grunraum-primary rounded-3xl shadow-lg">
+        <a href="#contact" className="border cursor-pointer hover:scale-105 transition-all duration-500 border-white px-6 py-3 uppercase text-sm font-semibold tracking-wide hover:bg-grunraum-primary hover:border-grunraum-primary rounded-3xl shadow-lg">
           Book a Personal Consultation
-        </button>
+        </a>
       </div>
 
       {/* Scroll Indicator */}

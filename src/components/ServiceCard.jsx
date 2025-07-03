@@ -1,12 +1,15 @@
 import React from 'react';
 
-export default function ServiceCard({ title, description, Icon }) {
+export default function ServiceCard({ title, description, Icon, image }) {
+  const defaultImage = "https://cdn.pixabay.com/photo/2017/09/25/20/07/lawnmower-2786525_640.jpg"
+ 
   return (
     <div className="max-w-sm mx-auto group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
       {/* Image Container */}
       <div className="relative">
         <img 
-          src="https://cdn.pixabay.com/photo/2017/09/25/20/07/lawnmower-2786525_640.jpg" 
+          src={image ? image : defaultImage} 
+          loading='lazy'
           alt="Gardener with pruning shears in a lush garden"
           className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
         />

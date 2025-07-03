@@ -1,21 +1,22 @@
 import { Menu, X } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import Logo from '../assets/logos/logo.jpg';
 
 const navItems = [
   {
-    label: '_home',
+    label: 'Home',
     href: '#',
   },
   {
-    label: '_About',
+    label: 'About',
     href: '#about',
   },
   {
-    label: '_services',
+    label: 'Services',
     href: '#services',
   },
   {
-    label: '_contact-us',
+    label: 'Contact Us',
     href: '#contact',
   },
 ]
@@ -52,21 +53,21 @@ const Navbar = () => {
     >
       <div className="mx-auto flex  h-full w-full max-w-[1200px] items-center justify-between px-4 py-1">
         {isVisible ? (
-          <span className="text-white  backdrop-blur-lg md:hidden">_menu</span>
+          <span className="text-white  backdrop-blur-lg px-4  py-1.5 md:hidden">_menu</span>
         ) : (
           <div className="animate-fade-up relative flex items-center gap-3 transition-all duration-300 md:static">
             {/* logo */}
             <a
-              href="https://www.codevertiser.com/"
+              href="#"
               className="flex items-center gap-3"
             >
               <img
-                src="https://res.cloudinary.com/dyvkdwzcj/image/upload/v1709055594/logo-1_vo1dni.png"
-                className="h-8"
+                src={Logo}
+                className="h-11 w-11 rounded-full border-2 border-white"
                 alt="Logo"
               />
             </a>
-            <span className="text-white">Grunraum Hasler</span>
+            <span className="text-white font-semibold text-lg tracking-wide">Grunraum Hasler</span>
           </div>
         )}
 
@@ -81,7 +82,7 @@ const Navbar = () => {
         </div>
 
         <ul
-          className={`${isVisible ? 'flex' : 'hidden'} animate-fade-in fixed top-16 left-0 z-10 h-screen w-full flex-col bg-green-700/80 backdrop-blur-2xl md:bg-transparent  md:static md:top-0 md:flex md:h-full md:w-[72%] md:flex-row lg:w-[65%]`}
+          className={`${isVisible ? 'flex' : 'hidden'} animate-fade-in fixed top-16 left-0 z-10 h-screen w-full flex-col bg-green-700/80 backdrop-blur-2xl md:backdrop-blur-none md:bg-transparent  md:static md:top-0 md:flex md:h-full md:w-[72%] md:flex-row lg:w-[65%]`}
         >
           {navItems.map((item) => (
             <li
