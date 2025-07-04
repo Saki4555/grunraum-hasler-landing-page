@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import {  motion } from "motion/react";
 import {
   BedCareWeedingMulchingFertilizing,
   DryStoneWalls,
@@ -36,120 +36,116 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { SectionContainer } from "./SectionContainer";
-import { s } from "motion/react-client";
+
 
 const services = [
   {
     id: 1,
-    title: "General Garden Maintenance",
-    description:
-      "Ongoing care to keep your entire garden healthy, tidy, and thriving.",
+    title: "Allgemeine Gartenpflege",
+    description: "Umfassende Pflege für Ihren gesamten Garten – regelmäßiges Jäten, Gießen, Schneiden und Aufräumen, damit Ihre Grünflächen stets gesund und gepflegt bleiben.",
     icon: Leaf,
     image: BedCareWeedingMulchingFertilizing,
   },
   {
     id: 2,
-    title: "Summer / Winter Pruning",
-    description: "Seasonal pruning to maintain plant health and aesthetics.",
+    title: "Sommer- / Winterschnitt",
+    description: "Gezielte Rückschnitte im Sommer und Winter zur Förderung des Wachstums, der Blütenbildung und zur Formgebung von Sträuchern, Hecken und Bäumen.",
     icon: Scissors,
     image: SummerWinterPruning,
   },
   {
     id: 3,
-    title: "Spring & Fall Services",
-    description:
-      "Seasonal preparation, cleanup, and transitions for your garden.",
+    title: "Frühjahrs- & Herbstservice",
+    description: "Professionelle Gartenarbeiten zu Saisonbeginn und -ende – inklusive Laubentfernung, Rückschnitt, Beetpflege und Vorbereitung auf den Winter oder Frühling.",
     icon: Sun,
     image: SpringFallServices,
   },
   {
     id: 4,
-    title: "New Plantings",
-    description:
-      "Fresh planting of trees, flowers, and shrubs to beautify your space.",
+    title: "Neupflanzungen",
+    description: "Beratung, Planung und Umsetzung von Neupflanzungen – ob Blumen, Sträucher oder Bäume, wir bringen neues Leben in Ihren Garten.",
     icon: Sprout,
     image: NewPlantings,
   },
   {
     id: 5,
-    title: "Spring and Fall Care",
-    description: "Specialized attention for plants during seasonal changes.",
+    title: "Frühjahrs- und Herbstpflege",
+    description: "Spezielle Pflegeleistungen abgestimmt auf die Bedürfnisse Ihrer Pflanzen im Frühling und Herbst – für kräftiges Wachstum und optimale Entwicklung.",
     icon: Repeat,
     image: SpringAndFallCare,
   },
   {
     id: 6,
-    title: "Plant Protection",
-    description: "Safeguarding your plants from pests, frost, and diseases.",
+    title: "Pflanzenschutz",
+    description: "Effektive Maßnahmen gegen Schädlinge, Pilze und Frost – wir schützen Ihre Pflanzen nachhaltig und umweltschonend.",
     icon: ShieldCheck,
     image: PlantProtection,
   },
   {
     id: 7,
-    title: "Dry Stone Walls",
-    description: "Rustic and sturdy walls crafted from natural stone.",
+    title: "Trockenmauern",
+    description: "Errichtung und Instandhaltung von Trockenmauern aus Naturstein – ideal zur Hangbefestigung oder als stilvolles Gestaltungselement im Garten.",
     icon: Mountain,
     image: DryStoneWalls,
   },
   {
     id: 8,
-    title: "Mowing, Aerating, Fertilizing Lawns",
-    description: "Complete care for thick, green, healthy lawns.",
+    title: "Rasen mähen, vertikutieren, düngen",
+    description: "Ganzheitliche Rasenpflege – von regelmäßigem Mähen bis zur gezielten Belüftung und Nährstoffversorgung für einen dichten, grünen Rasen.",
     icon: TreePine,
     image: MowingAeratingFertilizingLawns,
   },
   {
     id: 9,
-    title: "Hedge, Shrub, and Shape Pruning",
-    description: "Structural and aesthetic trimming for all plant shapes.",
+    title: "Hecken-, Strauch- und Formschnitt",
+    description: "Sorgfältiger Schnitt für Form, Gesundheit und Ästhetik Ihrer Hecken, Büsche und Zierpflanzen – fachgerecht und pflanzenschonend.",
     icon: Crop,
     image: HedgeShrubAndShapePruning,
   },
   {
     id: 10,
-    title: "Fruit Tree Pruning & Ornamental Shrub Care",
-    description: "Boost yields and shape ornamental shrubs with expert care.",
+    title: "Obstbaumschnitt & Ziergehölzpflege",
+    description: "Professioneller Rückschnitt für gesunde Ernteerträge bei Obstbäumen und gepflegte, schön wachsende Ziergehölze.",
     icon: Apple,
     image: FruitTreePruningOrnamentalShrubCare,
   },
   {
     id: 11,
-    title: "Bed Care: Weeding, Mulching, Fertilizing",
-    description:
-      "Maintain plant beds for nutrition, appearance, and weed control.",
+    title: "Beetpflege: Jäten, Mulchen, Düngen",
+    description: "Pflege Ihrer Blumen- und Gemüsebeete für ein optimales Wachstum – mit Unkrautentfernung, Mulchen und gezielter Düngung.",
     icon: Layers,
     image: BedCareWeedingMulchingFertilizing,
   },
   {
     id: 12,
-    title: "Leaf Removal & Seasonal Cleaning",
-    description: "Clear your garden of leaves and seasonal debris.",
+    title: "Laubentfernung & Saisonreinigung",
+    description: "Gründliche Reinigung Ihres Gartens zur Frühlings- oder Herbstsaison – inklusive Laubräumung, Schnittgutentsorgung und Flächenpflege.",
     icon: Wind,
     image: LeafRemovalSeasonalCleaning,
   },
   {
     id: 13,
-    title: "Weed Control",
-    description: "Protect your space from invasive, unwanted plants.",
+    title: "Unkrautbekämpfung",
+    description: "Effektive und nachhaltige Bekämpfung von Unkraut – mechanisch oder biologisch, je nach Bedarf und Umweltverträglichkeit.",
     icon: Ban,
     image: WeedControl,
   },
   {
     id: 14,
-    title: "Winter Protection Installation & Spring Preparation",
-    description:
-      "Install winter shields and prep your garden for spring rebirth.",
+    title: "Winterschutz & Frühjahrsaufbereitung",
+    description: "Schutzmaßnahmen wie Vlies, Abdeckungen oder Rückschnitte vor dem Winter sowie gründliche Vorbereitung Ihrer Pflanzen auf das Frühjahr.",
     icon: Snowflake,
     image: WinterProtectionInstallationSpringPreparation,
   },
   {
     id: 15,
-    title: "Garden Consultation",
-    description: "Tailored advice to bring your garden ideas to life.",
+    title: "Garten-Beratung",
+    description: "Individuelle Beratung direkt vor Ort – ob Umgestaltung, Pflanzenauswahl oder Pflegekonzepte, wir unterstützen Sie mit Fachwissen und Erfahrung.",
     icon: MessageSquare,
     image: GardenConsultation,
   },
 ];
+
 
 const ITEMS_PER_PAGE = 6;
 
@@ -175,16 +171,17 @@ export default function ServicesSection() {
       <SectionContainer>
         {/* Badge */}
         <div className="w-full flex justify-center">
-          <div className="inline-flex relative bg-grunraum-primary/80 px-4 py-2 overflow-hidden items-center gap-2 rounded-full text-white text-sm font-medium">
+          <div className="inline-flex tracking-wider relative bg-grunraum-primary/80 px-4 py-2 overflow-hidden items-center gap-2 rounded-full text-white text-sm font-medium">
             <Leaf className="w-4 h-4" />
-            Services – Grünraum Hasler
+            Leistungen – Grünraum Hasler
           </div>
         </div>
 
         {/* Heading */}
-        <h2 className="text-3xl tracking-wide sm:text-4xl font-bold text-gray-800 mb-12 text-center">
-          Our Garden Services
-        </h2>
+        <h2 className="text-3xl tracking-wider sm:text-4xl font-bold text-gray-800 mb-12 text-center">
+  Unsere Gartenleistungen
+</h2>
+
 
         {/* Cards */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -212,13 +209,13 @@ export default function ServicesSection() {
         </div>
 
         {/* Pagination Controls */}
-        <div className="mt-10 flex justify-center items-center gap-2">
+        <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}  viewport={{ once: true , amount: 0.4 }} transition={{ duration: 0.8 }} className="mt-10 flex justify-center items-center gap-2">
           <button
             onClick={() => goToPage(currentPage - 1)}
             disabled={currentPage === 1}
-            className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
+            className="px-3 py-1 tracking-wider bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
           >
-            Previous
+             Zurück
           </button>
 
           {[...Array(totalPages)].map((_, i) => (
@@ -238,11 +235,11 @@ export default function ServicesSection() {
           <button
             onClick={() => goToPage(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
+            className="px-3 py-1 bg-gray-200 tracking-wider rounded hover:bg-gray-300 disabled:opacity-50"
           >
-            Next
+            Weiter
           </button>
-        </div>
+        </motion.div>
       </SectionContainer>
     </section>
   );

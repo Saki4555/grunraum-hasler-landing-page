@@ -3,8 +3,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#17241d] text-white text-base py-6 px-6">
-      <p className="text-center">
-        © {year} – Grünraum Hasler. All rights reserved.
+      <p className="text-center tracking-wider">
+        © {year} – Grünraum Hasler. Alle Rechte vorbehalten.
       </p>
     </footer>
   );

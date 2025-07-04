@@ -13,10 +13,10 @@ const ContactUs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="inline-flex relative bg-grunraum-primary/80 px-4 py-2 overflow-hidden items-center gap-2 rounded-full text-white text-sm font-medium"
+          className="inline-flex  tracking-wider relative bg-grunraum-primary/80 px-4 py-2 overflow-hidden items-center gap-2 rounded-full text-white text-sm font-medium"
         >
           <Leaf className="w-4 h-4 " />
-          Contact – Grünraum Hasler
+          Kontakt – Grünraum Hasler
         </motion.div>
       </div>
       <motion.h2
@@ -24,9 +24,9 @@ const ContactUs = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.5 }}
-        className="text-3xl sm:text-4xl font-bold tracking-wide text-gray-800 mb-10 text-center"
+        className="text-3xl  sm:text-4xl font-bold tracking-wider text-gray-800 mb-10 text-center"
       >
-        Contact Us
+        Kontaktieren Sie uns
       </motion.h2>
       <SectionContainer>
         <div className="md:flex rounded-2xl ">
