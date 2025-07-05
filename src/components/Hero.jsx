@@ -1,8 +1,8 @@
 
 
-import React from "react";
 import { Mouse } from "lucide-react";
 import { motion } from "motion/react"; 
+import heroBG from '../assets/hero-images/hero-bg.avif';
 
 export default function Hero() {
   return (
@@ -10,7 +10,8 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1689728222087-6984f72460c4?w=1600&auto=format&fit=crop&q=80"
+          src={heroBG ||  "https://images.unsplash.com/photo-1689728222087-6984f72460c4?w=1600&auto=format&fit=crop&q=80"}
+          loading="lazy"
           alt="Garden Background"
           className="w-full h-full object-cover"
         />

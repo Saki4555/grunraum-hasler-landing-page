@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Leaf, Phone,  Mail } from "lucide-react";
 import { SectionContainer } from "./SectionContainer";
 import aboutOne from "../assets/about-images/about-1.jpg"; // Adjust the path as necessary
-import aboutTwo from "../assets/about-images/about-2.avif"; // Uncomment if you use this image
+import aboutTwo from "../assets/about-images/about-2.jpg"; // Uncomment if you use this image
 
 
 export default function About() {
@@ -51,13 +51,13 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.7 }}
-              className="absolute bottom-16 -right-2.5 sm:-right-5 md:-right-14 z-30 max-w-3/5"
+              className="absolute bottom-16 bg-transparent overflow-hidden  -right-2.5 sm:-right-5 md:-right-14 z-30 max-w-3/5"
             >
-              <div className="relative w-full bg-gradient-to-tr from-grunraum-primary/90 via-grunraum-secondary/50 to-grunraum-primary/90 p-1  rounded-tr-[40%] rounded-bl-[40%] overflow-hidden shadow-lg bg-white">
+              <div className="relative w-full    bg-transparent  overflow-hidden shadow-lg ">
                 <img
                   src={aboutTwo}
                   alt="Man with plant"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover  backdrop-blur-2xl bg-gradient-to-tr from-grunraum-primary/90 via-grunraum-secondary/50 to-grunraum-primary/90 p-1 bg-transparent   rounded-tr-[40%] rounded-bl-[40%]"
                 />
               </div>
             </motion.div>
