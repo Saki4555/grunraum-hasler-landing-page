@@ -15,6 +15,7 @@ import {
   SummerWinterPruning,
   WeedControl,
   WinterProtectionInstallationSpringPreparation,
+  BalconyPlanting
 } from "../assets";
 import ServiceCard from "./ServiceCard";
 
@@ -45,104 +46,127 @@ const services = [
     description: "Umfassende Pflege für Ihren gesamten Garten – regelmäßiges Jäten, Gießen, Schneiden und Aufräumen, damit Ihre Grünflächen stets gesund und gepflegt bleiben.",
     icon: Leaf,
     image: BedCareWeedingMulchingFertilizing,
+    alt: "Allgemeine Gartenpflege",
   },
   {
     id: 2,
+    title: "Bepflanzung von Balkonen",
+    description: "Professionelle Begrünung von Balkonen – wir gestalten Ihren Balkon individuell mit Pflanzen, Blumen oder Kräutern und schaffen so eine grüne Wohlfühloase auch auf kleinem Raum.",
+    icon: Sprout,
+    image: BalconyPlanting,
+    alt: "Bepflanzung von Balkonen",
+  },
+  {
+    id: 3,
     title: "Sommer- / Winterschnitt",
     description: "Gezielte Rückschnitte im Sommer und Winter zur Förderung des Wachstums, der Blütenbildung und zur Formgebung von Sträuchern, Hecken und Bäumen.",
     icon: Scissors,
     image: SummerWinterPruning,
+    alt: "Sommer- / Winterschnitt",
   },
   {
-    id: 3,
+    id: 4,
     title: "Frühjahrs- & Herbstservice",
     description: "Professionelle Gartenarbeiten zu Saisonbeginn und -ende – inklusive Laubentfernung, Rückschnitt, Beetpflege und Vorbereitung auf den Winter oder Frühling.",
     icon: Sun,
     image: SpringFallServices,
+    alt: "Frühjahrs- & Herbstservice",
   },
   {
-    id: 4,
+    id: 5,
     title: "Neupflanzungen",
     description: "Beratung, Planung und Umsetzung von Neupflanzungen – ob Blumen, Sträucher oder Bäume, wir bringen neues Leben in Ihren Garten.",
     icon: Sprout,
     image: NewPlantings,
+    alt: "Neupflanzungen",
   },
   {
-    id: 5,
+    id: 6,
     title: "Frühjahrs- und Herbstpflege",
     description: "Spezielle Pflegeleistungen abgestimmt auf die Bedürfnisse Ihrer Pflanzen im Frühling und Herbst – für kräftiges Wachstum und optimale Entwicklung.",
     icon: Repeat,
     image: SpringAndFallCare,
+    alt: "Frühjahrs- und Herbstpflege",
   },
   {
-    id: 6,
+    id: 7,
     title: "Pflanzenschutz",
     description: "Effektive Maßnahmen gegen Schädlinge, Pilze und Frost – wir schützen Ihre Pflanzen nachhaltig und umweltschonend.",
     icon: ShieldCheck,
     image: PlantProtection,
+    alt: "Pflanzenschutz",
   },
   {
-    id: 7,
+    id: 8,
     title: "Trockenmauern",
     description: "Errichtung und Instandhaltung von Trockenmauern aus Naturstein – ideal zur Hangbefestigung oder als stilvolles Gestaltungselement im Garten.",
     icon: Mountain,
     image: DryStoneWalls,
+    alt: "Trockenmauern",
   },
   {
-    id: 8,
+    id: 9,
     title: "Rasen mähen, vertikutieren, düngen",
     description: "Ganzheitliche Rasenpflege – von regelmäßigem Mähen bis zur gezielten Belüftung und Nährstoffversorgung für einen dichten, grünen Rasen.",
     icon: TreePine,
     image: MowingAeratingFertilizingLawns,
+    alt: "Rasen mähen, vertikutieren, düngen",
   },
   {
-    id: 9,
+    id: 10,
     title: "Hecken-, Strauch- und Formschnitt",
     description: "Sorgfältiger Schnitt für Form, Gesundheit und Ästhetik Ihrer Hecken, Büsche und Zierpflanzen – fachgerecht und pflanzenschonend.",
     icon: Crop,
     image: HedgeShrubAndShapePruning,
+    alt: "Hecken-, Strauch- und Formschnitt",
   },
   {
-    id: 10,
+    id: 11,
     title: "Obstbaumschnitt & Ziergehölzpflege",
     description: "Professioneller Rückschnitt für gesunde Ernteerträge bei Obstbäumen und gepflegte, schön wachsende Ziergehölze.",
     icon: Apple,
     image: FruitTreePruningOrnamentalShrubCare,
+    alt: "Obstbaumschnitt & Ziergehölzpflege",
   },
   {
-    id: 11,
+    id: 12,
     title: "Beetpflege: Jäten, Mulchen, Düngen",
     description: "Pflege Ihrer Blumen- und Gemüsebeete für ein optimales Wachstum – mit Unkrautentfernung, Mulchen und gezielter Düngung.",
     icon: Layers,
     image: BedCareWeedingMulchingFertilizing,
+    alt: "Beetpflege: Jäten, Mulchen, Düngen",
   },
   {
-    id: 12,
+    id: 13,
     title: "Laubentfernung & Saisonreinigung",
     description: "Gründliche Reinigung Ihres Gartens zur Frühlings- oder Herbstsaison – inklusive Laubräumung, Schnittgutentsorgung und Flächenpflege.",
     icon: Wind,
     image: LeafRemovalSeasonalCleaning,
+    alt: "Laubentfernung & Saisonreinigung",
   },
   {
-    id: 13,
+    id: 14,
     title: "Unkrautbekämpfung",
     description: "Effektive und nachhaltige Bekämpfung von Unkraut – mechanisch oder biologisch, je nach Bedarf und Umweltverträglichkeit.",
     icon: Ban,
     image: WeedControl,
+    alt: "Unkrautbekämpfung",
   },
   {
-    id: 14,
+    id: 15,
     title: "Winterschutz & Frühjahrsaufbereitung",
     description: "Schutzmaßnahmen wie Vlies, Abdeckungen oder Rückschnitte vor dem Winter sowie gründliche Vorbereitung Ihrer Pflanzen auf das Frühjahr.",
     icon: Snowflake,
     image: WinterProtectionInstallationSpringPreparation,
+    alt: "Winterschutz & Frühjahrsaufbereitung",
   },
   {
-    id: 15,
+    id: 16,
     title: "Garten-Beratung",
     description: "Individuelle Beratung direkt vor Ort – ob Umgestaltung, Pflanzenauswahl oder Pflegekonzepte, wir unterstützen Sie mit Fachwissen und Erfahrung.",
     icon: MessageSquare,
     image: GardenConsultation,
+    alt: "Garten-Beratung",
   },
 ];
 
@@ -178,7 +202,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Heading */}
-        <h2 className="text-3xl tracking-wider sm:text-4xl font-bold text-gray-800 mb-12 text-center">
+        <h2 className="text-3xl mt-2 tracking-wider sm:text-4xl font-bold text-gray-800 mb-12 text-center">
   Unsere Gartenleistungen
 </h2>
 
@@ -203,6 +227,7 @@ export default function ServicesSection() {
                 description={service.description}
                 Icon={service.icon}
                 image={service.image}
+                alt={service.alt}
               />
             </motion.div>
           ))}

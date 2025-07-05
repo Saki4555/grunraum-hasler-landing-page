@@ -29,7 +29,7 @@ const ContactForm = () => {
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.8 }}
       style={backgroundStyle}
       className="px-4 sm:px-7  lg:px-10 text-white w-full md:w-2/3 py-10 relative z-20"

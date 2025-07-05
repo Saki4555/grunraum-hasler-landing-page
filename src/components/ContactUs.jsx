@@ -24,7 +24,7 @@ const ContactUs = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.5 }}
-        className="text-3xl  sm:text-4xl font-bold tracking-wider text-gray-800 mb-10 text-center"
+        className="text-3xl mt-2 sm:text-4xl font-bold tracking-wider text-gray-800 mb-10 text-center"
       >
         Kontaktieren Sie uns
       </motion.h2>

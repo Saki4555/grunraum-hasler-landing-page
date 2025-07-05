@@ -9,9 +9,9 @@ import aboutTwo from "../assets/about-images/about-2.avif"; // Uncomment if you 
 
 export default function About() {
   return (
-    <div id="about" className="min-h-screen bg-gray-50 py-20 overflow-hidden">
+    <div id="about" className="min-h-screen bg-gray-50 pt-20 pb-16 overflow-hidden">
       <SectionContainer>
-        <div className="grid lg:grid-cols-2 gap-5 lg:gap-10 items-center">
+        <div className="grid lg:grid-cols-2 gap-5 lg:gap-14 items-center">
           {/* Left Images Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}

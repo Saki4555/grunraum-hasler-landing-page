@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ServiceCard({ title, description, Icon, image }) {
+export default function ServiceCard({ title, description, Icon, image,alt }) {
   const ServiceIcon = Icon ;
  
   const defaultImage = "https://cdn.pixabay.com/photo/2017/09/25/20/07/lawnmower-2786525_640.jpg"
@@ -12,13 +12,13 @@ export default function ServiceCard({ title, description, Icon, image }) {
         <img 
           src={image ? image : defaultImage} 
           loading='lazy'
-          alt="Gardener with pruning shears in a lush garden"
+          alt={alt || "Gardener with pruning shears in a lush garden"}
           className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
         />
         {/* 10% OFF Tag */}
-  <div className="absolute top-3 right-3 tracking-widest bg-grunraum-primary/80 animate-pulse backdrop-blur-2xl text-white text-xs font-semibold  px-3 py-1 rounded-full shadow-sm border border-white/70uppercase ">
+  {/* <div className="absolute top-3 right-3 tracking-widest bg-grunraum-primary/80 animate-pulse backdrop-blur-2xl text-white text-xs font-semibold  px-3 py-1 rounded-full shadow-sm border border-white/70uppercase ">
     10% Rabatt
-  </div>
+  </div> */}
         
         {/* Circular Logo Overlay */}
         <div className="absolute -bottom-6 right-6">

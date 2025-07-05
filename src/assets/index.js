@@ -12,7 +12,7 @@ import SpringAndFallCare from "../assets/services-images/SpringandFallCare.jpg";
 import SummerWinterPruning from "../assets/services-images/SummerWinterPruning.jpg";
 import WeedControl from "../assets/services-images/WeedControl.jpg";
 import WinterProtectionInstallationSpringPreparation from "../assets/services-images/WinterProtectionInstallation&SpringPreparation.jpg";
-
+import BalconyPlanting from "../assets/services-images/BalconyPlanting.jpg";;
 export {
   BedCareWeedingMulchingFertilizing,
   DryStoneWalls,
@@ -28,4 +28,5 @@ export {
   SummerWinterPruning,
   WeedControl,
   WinterProtectionInstallationSpringPreparation,
+  BalconyPlanting,
 };

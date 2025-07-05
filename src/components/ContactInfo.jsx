@@ -24,7 +24,7 @@ const ContactInfo = () => {
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.8 }}
       className="bg-green-100/40 w-full md:w-1/3   p-8 shadow-md   flex flex-col justify-center"
     >

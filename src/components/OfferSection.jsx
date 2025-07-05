@@ -21,7 +21,7 @@ export default function OfferSection() {
     visible: { opacity: 1, x: 0, y: 0 },
   };
   return (
-    <section className=" bg-gray-50 overflow-hidden py-16">
+    <section id="offer" className=" bg-gray-50 overflow-hidden py-16">
       <SectionContainer>
         {" "}
         <div className=" grid md:grid-cols-2 gap-5 lg:gap-10 items-center">
@@ -30,7 +30,7 @@ export default function OfferSection() {
             variants={variants}
             initial="hiddenLeft"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
@@ -67,7 +67,7 @@ export default function OfferSection() {
             variants={variants}
             initial="hiddenRight"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8 }}
           >
             <img

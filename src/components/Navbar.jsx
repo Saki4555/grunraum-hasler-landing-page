@@ -4,22 +4,28 @@ import Logo from '../assets/logos/logo.jpg';
 
 const navItems = [
   {
-    label: 'Startseite',        // Home
+    label: 'Startseite',        
     href: '#',
   },
   {
-    label: 'Über uns',          // About
+    label: 'Über uns',          
     href: '#about',
   },
   {
-    label: 'Leistungen',        // Services
-    href: '#services',
+    label: 'Angebot',           // Offer Section
+    href: '#offer',
   },
   {
-    label: 'Kontakt',           // Contact Us
+    label: 'Leistungen',        
+    href: '#services',
+  },
+  
+  {
+    label: 'Kontakt',           
     href: '#contact',
   },
 ];
+
 
 
 const Navbar = () => {
@@ -48,7 +54,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`h-16 fixed top-0 left-0 z-[999] w-full overflow-hidden border-b border-white/50 transition-colors duration-300 ${
+      className={`h-16 fixed top-0 left-0 z-[999] w-full overflow-hidden md:border-b border-white/50 transition-colors duration-300 ${
         isScrolled ? 'bg-green-950/60 ' : 'bg-transparent'
       } ${isVisible || !isScrolled ? "backdrop-blur-none" : "backdrop-blur-3xl"}`}
     >
