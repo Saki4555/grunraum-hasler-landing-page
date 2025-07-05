@@ -2,10 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Leaf, Phone, CheckCircle, Mail } from "lucide-react";
+import { Leaf, Phone,  Mail } from "lucide-react";
 import { SectionContainer } from "./SectionContainer";
 import aboutOne from "../assets/about-images/about-1.jpg"; // Adjust the path as necessary
 import aboutTwo from "../assets/about-images/about-2.avif"; // Uncomment if you use this image
+
 
 export default function About() {
   return (

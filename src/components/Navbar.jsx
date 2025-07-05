@@ -60,13 +60,13 @@ const Navbar = () => {
     >
       <div className="mx-auto flex  h-full w-full max-w-[1200px] items-center justify-between px-4 py-1">
         {isVisible ? (
-         <span className="text-white backdrop-blur-lg px-4 py-1.5 md:hidden tracking-wider">Menü</span>
+         <span className="text-white backdrop-blur-md px-4 py-1.5 md:hidden tracking-wider">Menü</span>
 
         ) : (
-          <div className="animate-fade-up relative flex items-center gap-3 transition-all duration-300 md:static">
+          <a href='#' className="animate-fade-up relative flex items-center gap-3 transition-all duration-300 md:static">
             {/* logo */}
-            <a
-              href="#"
+            <div
+             
               className="flex items-center gap-3"
             >
               <img
@@ -74,9 +74,9 @@ const Navbar = () => {
                 className="h-11 w-11 rounded-full border-2 border-white"
                 alt="Logo"
               />
-            </a>
+            </div>
             <span className="text-white font-semibold text-lg tracking-wider">Grünraum Hasler</span>
-          </div>
+          </a>
         )}
 
         <div className="md:hidden">

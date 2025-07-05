@@ -7,12 +7,13 @@ import LeafRemovalSeasonalCleaning from "../assets/services-images/LeafRemoval&S
 import MowingAeratingFertilizingLawns from "../assets/services-images/MowingAeratingFertilizingLawns.jpg";
 import NewPlantings from "../assets/services-images/NewPlantings.jpg";
 import PlantProtection from "../assets/services-images/PlantProtection.jpg";
-import SpringFallServices from "../assets/services-images/Spring&FallServices.jpg";
-import SpringAndFallCare from "../assets/services-images/SpringandFallCare.jpg";
+import SpringFallServices from "../assets/services-images/SpringFallServices.jpg";
+
 import SummerWinterPruning from "../assets/services-images/SummerWinterPruning.jpg";
 import WeedControl from "../assets/services-images/WeedControl.jpg";
 import WinterProtectionInstallationSpringPreparation from "../assets/services-images/WinterProtectionInstallation&SpringPreparation.jpg";
 import BalconyPlanting from "../assets/services-images/BalconyPlanting.jpg";;
+import GardenCare from "../assets/services-images/GardenCare.jpg";
 export {
   BedCareWeedingMulchingFertilizing,
   DryStoneWalls,
@@ -24,9 +25,10 @@ export {
   NewPlantings,
   PlantProtection,
   SpringFallServices,
-  SpringAndFallCare,
+ 
   SummerWinterPruning,
   WeedControl,
   WinterProtectionInstallationSpringPreparation,
   BalconyPlanting,
+  GardenCare
 };

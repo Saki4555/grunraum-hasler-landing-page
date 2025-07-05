@@ -11,11 +11,12 @@ import {
   NewPlantings,
   PlantProtection,
   SpringFallServices,
-  SpringAndFallCare,
+
   SummerWinterPruning,
   WeedControl,
   WinterProtectionInstallationSpringPreparation,
-  BalconyPlanting
+  BalconyPlanting,
+  GardenCare,
 } from "../assets";
 import ServiceCard from "./ServiceCard";
 
@@ -45,7 +46,7 @@ const services = [
     title: "Allgemeine Gartenpflege",
     description: "Umfassende Pflege für Ihren gesamten Garten – regelmäßiges Jäten, Gießen, Schneiden und Aufräumen, damit Ihre Grünflächen stets gesund und gepflegt bleiben.",
     icon: Leaf,
-    image: BedCareWeedingMulchingFertilizing,
+    image: GardenCare,
     alt: "Allgemeine Gartenpflege",
   },
   {
@@ -80,16 +81,9 @@ const services = [
     image: NewPlantings,
     alt: "Neupflanzungen",
   },
+ 
   {
     id: 6,
-    title: "Frühjahrs- und Herbstpflege",
-    description: "Spezielle Pflegeleistungen abgestimmt auf die Bedürfnisse Ihrer Pflanzen im Frühling und Herbst – für kräftiges Wachstum und optimale Entwicklung.",
-    icon: Repeat,
-    image: SpringAndFallCare,
-    alt: "Frühjahrs- und Herbstpflege",
-  },
-  {
-    id: 7,
     title: "Pflanzenschutz",
     description: "Effektive Maßnahmen gegen Schädlinge, Pilze und Frost – wir schützen Ihre Pflanzen nachhaltig und umweltschonend.",
     icon: ShieldCheck,
@@ -97,7 +91,7 @@ const services = [
     alt: "Pflanzenschutz",
   },
   {
-    id: 8,
+    id: 7,
     title: "Trockenmauern",
     description: "Errichtung und Instandhaltung von Trockenmauern aus Naturstein – ideal zur Hangbefestigung oder als stilvolles Gestaltungselement im Garten.",
     icon: Mountain,
@@ -105,7 +99,7 @@ const services = [
     alt: "Trockenmauern",
   },
   {
-    id: 9,
+    id: 8,
     title: "Rasen mähen, vertikutieren, düngen",
     description: "Ganzheitliche Rasenpflege – von regelmäßigem Mähen bis zur gezielten Belüftung und Nährstoffversorgung für einen dichten, grünen Rasen.",
     icon: TreePine,
@@ -113,7 +107,7 @@ const services = [
     alt: "Rasen mähen, vertikutieren, düngen",
   },
   {
-    id: 10,
+    id: 9,
     title: "Hecken-, Strauch- und Formschnitt",
     description: "Sorgfältiger Schnitt für Form, Gesundheit und Ästhetik Ihrer Hecken, Büsche und Zierpflanzen – fachgerecht und pflanzenschonend.",
     icon: Crop,
@@ -121,7 +115,7 @@ const services = [
     alt: "Hecken-, Strauch- und Formschnitt",
   },
   {
-    id: 11,
+    id: 10,
     title: "Obstbaumschnitt & Ziergehölzpflege",
     description: "Professioneller Rückschnitt für gesunde Ernteerträge bei Obstbäumen und gepflegte, schön wachsende Ziergehölze.",
     icon: Apple,
@@ -129,7 +123,7 @@ const services = [
     alt: "Obstbaumschnitt & Ziergehölzpflege",
   },
   {
-    id: 12,
+    id: 11,
     title: "Beetpflege: Jäten, Mulchen, Düngen",
     description: "Pflege Ihrer Blumen- und Gemüsebeete für ein optimales Wachstum – mit Unkrautentfernung, Mulchen und gezielter Düngung.",
     icon: Layers,
@@ -137,7 +131,7 @@ const services = [
     alt: "Beetpflege: Jäten, Mulchen, Düngen",
   },
   {
-    id: 13,
+    id: 12,
     title: "Laubentfernung & Saisonreinigung",
     description: "Gründliche Reinigung Ihres Gartens zur Frühlings- oder Herbstsaison – inklusive Laubräumung, Schnittgutentsorgung und Flächenpflege.",
     icon: Wind,
@@ -145,7 +139,7 @@ const services = [
     alt: "Laubentfernung & Saisonreinigung",
   },
   {
-    id: 14,
+    id: 13,
     title: "Unkrautbekämpfung",
     description: "Effektive und nachhaltige Bekämpfung von Unkraut – mechanisch oder biologisch, je nach Bedarf und Umweltverträglichkeit.",
     icon: Ban,
@@ -153,7 +147,7 @@ const services = [
     alt: "Unkrautbekämpfung",
   },
   {
-    id: 15,
+    id: 14,
     title: "Winterschutz & Frühjahrsaufbereitung",
     description: "Schutzmaßnahmen wie Vlies, Abdeckungen oder Rückschnitte vor dem Winter sowie gründliche Vorbereitung Ihrer Pflanzen auf das Frühjahr.",
     icon: Snowflake,
@@ -161,7 +155,7 @@ const services = [
     alt: "Winterschutz & Frühjahrsaufbereitung",
   },
   {
-    id: 16,
+    id: 15,
     title: "Garten-Beratung",
     description: "Individuelle Beratung direkt vor Ort – ob Umgestaltung, Pflanzenauswahl oder Pflegekonzepte, wir unterstützen Sie mit Fachwissen und Erfahrung.",
     icon: MessageSquare,
