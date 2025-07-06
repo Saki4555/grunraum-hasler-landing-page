@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useEffect, useState } from "react";
 import { SectionContainer } from "./SectionContainer";
-import profilePhoto from '../assets/about-images/about-2.jpg';
+import offerPhoto from '../assets/offer-images/logo.jpg';
 
 export default function OfferSection() {
   const isMobile = useIsMobile();
@@ -71,13 +71,13 @@ export default function OfferSection() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8 }}
-            className="relative overflow-hidden aspect-[6/5]"
+            className="relative overflow-hidden aspect-[6/5] "
           >
             <img
-              src={profilePhoto || "https://cdn.pixabay.com/photo/2017/09/25/20/07/lawnmower-2786525_640.jpg"}
+              src={offerPhoto || "https://cdn.pixabay.com/photo/2017/09/25/20/07/lawnmower-2786525_640.jpg"}
               alt="Gartenangebot"
               loading="lazy"
-              className="w-full h-full object-cover object-center rounded-xl shadow-md"
+              className="w-full h-full border-4 border-green-800  object-cover object-center rounded-xl shadow-md"
             />
           </motion.div>
         </div>

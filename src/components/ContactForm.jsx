@@ -97,6 +97,8 @@ const ContactForm = () => {
               className="w-full px-4 py-3 rounded-full bg-white border border-gray-300 placeholder-gray-500 placeholder:tracking-widest text-black focus:outline-none focus:ring-2 focus:ring-lime-500 transition duration-200 ease-in-out"
               required
             />
+            <input type="hidden" name="subject" value="Neue Kontaktanfrage" />
+
             <input
               type="email"
               name="email"
@@ -148,3 +150,5 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+

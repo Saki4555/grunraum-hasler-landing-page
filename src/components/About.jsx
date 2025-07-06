@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Leaf, Phone,  Mail } from "lucide-react";
 import { SectionContainer } from "./SectionContainer";
 import aboutOne from "../assets/about-images/about-1.jpg"; // Adjust the path as necessary
-import aboutTwo from '../assets/services-images/BalconyPlanting.jpg';
+import aboutTwo from '../assets/about-images/about-2.jpg';
 
 
 export default function About() {
@@ -35,7 +35,7 @@ export default function About() {
                 className="w-full h-[480px] object-cover "
               />
               {/* Experience Badge */}
-              <div className="absolute bottom-0 w-full flex justify-center right-0 bg-grunraum-secondary/20 backdrop-blur-xl text-white   shadow-xl ">
+              <div className="absolute bottom-0 w-full flex justify-center right-0 bg-grunraum-secondary/40 backdrop-blur-xl text-white   shadow-xl ">
                 <div className="  tracking-wider text-center px-3 py-2.5 w-1/2 ml-10">
                   <p className="text-xl font-bold mb-0.5 ml-4">10+</p>
                   <p className="text-sm font-medium leading-none">
@@ -53,7 +53,7 @@ export default function About() {
               transition={{ delay: 0.4, duration: 0.7 }}
               className="absolute bottom-16 bg-transparent overflow-hidden  -right-2.5 sm:-right-5 md:-right-14 z-30 max-w-3/5"
             >
-              <div className="relative w-full h-80    bg-transparent  overflow-hidden shadow-lg ">
+              <div className="relative w-full     bg-transparent  overflow-hidden shadow-lg ">
                 <img
                   src={aboutTwo}
                   alt="Man with plant"
