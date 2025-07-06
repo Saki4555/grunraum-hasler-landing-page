@@ -3,6 +3,8 @@ import { motion } from "motion/react";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useEffect, useState } from "react";
 import { SectionContainer } from "./SectionContainer";
+import profilePhoto from '../assets/about-images/about-2.jpg';
+
 export default function OfferSection() {
   const isMobile = useIsMobile();
   const [mounted, setMounted] = useState(false);
@@ -24,7 +26,7 @@ export default function OfferSection() {
     <section id="offer" className=" bg-gray-50 overflow-hidden py-16">
       <SectionContainer>
         {" "}
-        <div className=" grid md:grid-cols-2 gap-5 lg:gap-10 items-center">
+        <div className=" grid md:grid-cols-2  gap-5 lg:gap-10 items-center">
           {/* Left Text Section */}
           <motion.div
             variants={variants}
@@ -69,11 +71,13 @@ export default function OfferSection() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8 }}
+            className="relative overflow-hidden aspect-[6/5]"
           >
             <img
-              src="https://cdn.pixabay.com/photo/2017/09/25/20/07/lawnmower-2786525_640.jpg"
+              src={profilePhoto || "https://cdn.pixabay.com/photo/2017/09/25/20/07/lawnmower-2786525_640.jpg"}
               alt="Gartenangebot"
-              className="w-full h-auto rounded-xl shadow-md"
+              loading="lazy"
+              className="w-full h-full object-cover object-center rounded-xl shadow-md"
             />
           </motion.div>
         </div>

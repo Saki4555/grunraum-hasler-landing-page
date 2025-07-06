@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Leaf, Phone,  Mail } from "lucide-react";
 import { SectionContainer } from "./SectionContainer";
 import aboutOne from "../assets/about-images/about-1.jpg"; // Adjust the path as necessary
-import aboutTwo from "../assets/about-images/about-2.jpg"; // Uncomment if you use this image
+import aboutTwo from '../assets/services-images/BalconyPlanting.jpg';
 
 
 export default function About() {
@@ -53,7 +53,7 @@ export default function About() {
               transition={{ delay: 0.4, duration: 0.7 }}
               className="absolute bottom-16 bg-transparent overflow-hidden  -right-2.5 sm:-right-5 md:-right-14 z-30 max-w-3/5"
             >
-              <div className="relative w-full    bg-transparent  overflow-hidden shadow-lg ">
+              <div className="relative w-full h-80    bg-transparent  overflow-hidden shadow-lg ">
                 <img
                   src={aboutTwo}
                   alt="Man with plant"
