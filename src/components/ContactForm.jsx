@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
-
+import emailjs from "@emailjs/browser";
 const ContactForm = () => {
   const isMobile = useIsMobile();
   const [mounted, setMounted] = useState(false);
@@ -49,21 +49,45 @@ const ContactForm = () => {
       !formData.phone ||
       !formData.message
     ) {
+      toast.error("Bitte füllen Sie alle Felder aus.");
       return;
     }
-    setLoading(true);
-    toast.error( <div className="tracking wider">
-        Fehler beim Senden der Nachricht. Bitte kontaktieren Sie uns direkt unter{" "}
-        <a
-          href="mailto:info@gruenraumhasler.ch"
-          className="underline tracking-wider text-lime-500 hover:text-lime-600"
-        >
-          info@gruenraumhasler.ch
-        </a>
-      </div>);
-    setLoading(false);
 
-   
+    setLoading(true);
+
+    emailjs
+      .sendForm("service_f60mfea", "template_pk0abj2", e.target, {
+        publicKey: "v4xKN0CZ3ZdpMSvNQ", 
+      })
+      .then(() => {
+        toast.success("Ihre Nachricht wurde erfolgreich gesendet!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+        e.target.reset(); // Resets hidden subject too
+      })
+      .catch((err) => {
+        console.error(err);
+        toast.error(
+          <div className="tracking-wider">
+            Fehler beim Senden der Nachricht. Bitte kontaktieren Sie uns direkt
+            unter{" "}
+            <a
+              href="mailto:info@gruenraumhasler.ch"
+              className="underline tracking-wider text-lime-500 hover:text-lime-600"
+            >
+              info@gruenraumhasler.ch
+            </a>
+          </div>
+        );
+        
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -97,7 +121,11 @@ const ContactForm = () => {
               className="w-full px-4 py-3 rounded-full bg-white border border-gray-300 placeholder-gray-500 placeholder:tracking-widest text-black focus:outline-none focus:ring-2 focus:ring-lime-500 transition duration-200 ease-in-out"
               required
             />
-            <input type="hidden" name="subject" value="Neue Kontaktanfrage" />
+            <input
+              type="hidden"
+              name="subject"
+              value={`Neue Kontaktanfrage von ${formData.name || "Unbekannt"}`}
+            />
 
             <input
               type="email"
@@ -151,4 +179,8 @@ const ContactForm = () => {
 
 export default ContactForm;
 
+// service_f60mfea
+// template_pk0abj2
 
+// hasler.v2@outlook.com
+// XXXXXX123456
