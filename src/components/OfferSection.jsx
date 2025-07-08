@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useEffect, useState } from "react";
 import { SectionContainer } from "./SectionContainer";
-import offerPhoto from '../assets/offer-images/logo.jpg';
+import offerPhoto from '../assets/offer-image/grunarum-offer.jpg';
 
 export default function OfferSection() {
   const isMobile = useIsMobile();
@@ -74,7 +74,7 @@ export default function OfferSection() {
             className="relative overflow-hidden aspect-[6/5] "
           >
             <img
-              src={offerPhoto || "https://cdn.pixabay.com/photo/2017/09/25/20/07/lawnmower-2786525_640.jpg"}
+              src={offerPhoto }
               alt="Gartenangebot"
               loading="lazy"
               className="w-full h-full border-4 border-green-800  object-cover object-center rounded-xl shadow-md"

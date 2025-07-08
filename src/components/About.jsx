@@ -4,8 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Leaf, Phone,  Mail } from "lucide-react";
 import { SectionContainer } from "./SectionContainer";
-import aboutOne from "../assets/about-images/about-1.jpg"; // Adjust the path as necessary
-import aboutTwo from '../assets/about-images/about-2.jpg';
+import aboutOne from "../assets/aboutImages/about-1.jpg"; // Adjust the path as necessary
+import aboutTwo from '../assets/aboutImages/owner-photo.jpg';
 
 
 export default function About() {

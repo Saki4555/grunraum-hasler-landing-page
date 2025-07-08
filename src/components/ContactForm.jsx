@@ -56,8 +56,8 @@ const ContactForm = () => {
     setLoading(true);
 
     emailjs
-      .sendForm("service_f60mfea", "template_pk0abj2", e.target, {
-        publicKey: "v4xKN0CZ3ZdpMSvNQ", 
+      .sendForm("service_38ak3ek", "template_rrlfa2m", e.target, {
+        publicKey: "YZhlESeVPJsaWQVgO",
       })
       .then(() => {
         toast.success("Ihre Nachricht wurde erfolgreich gesendet!");
@@ -83,7 +83,6 @@ const ContactForm = () => {
             </a>
           </div>
         );
-        
       })
       .finally(() => {
         setLoading(false);
@@ -179,8 +178,4 @@ const ContactForm = () => {
 
 export default ContactForm;
 
-// service_f60mfea
-// template_pk0abj2
 
-// hasler.v2@outlook.com
-// XXXXXX123456
